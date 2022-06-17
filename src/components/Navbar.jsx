@@ -12,9 +12,19 @@ const Navbar = () => {
           style={{ width: "48px", height: "48px", margin: "0 20px" }}
         />
       </Link>
-      <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
-        <Link to="/">Home</Link>
-        <Link to="/">Exercises</Link>
+      <Stack
+        direction="row"
+        gap="40px"
+        fontSize="24px"
+        alignItems="flex-end"
+        color="#000"
+      >
+        <Link to="/" style={{ color: "#000" }}>
+          Home
+        </Link>
+        <Link to="/" style={{ color: "#000" }}>
+          Exercises
+        </Link>
       </Stack>
     </Stack>
   );

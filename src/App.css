@@ -1,6 +1,7 @@
 body {
   font-family: "Josefin Sans";
   background-color: #fffafb;
+  overflow-x: hidden;
 }
 
 * {
@@ -8,9 +9,19 @@ body {
   margin: 0px;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
+  /* width: 0px; */
+/* }
+.section::-webkit-scrollbar {
   width: 0px;
+  height: 0px;
+} */
+.react-horizontal-scrolling-menu--scroll-container {
+  overflow-x: hidden;
 }
 
 .right-arrow,
