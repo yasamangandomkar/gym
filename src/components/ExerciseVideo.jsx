@@ -1,23 +1,31 @@
-import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
+import { Typography, Box, Stack } from "@mui/material";
+import Loader from "./Loader";
 
-const ExerciseVideo = ({ exerciseVideo, name }) => {
+const ExerciseVideo = ({ exerciseVideos, name }) => {
+  if (!exerciseVideos.length) return <Loader />;
+
   return (
-    <Box sx={{ marginTop: "200px" }}>
-      <Typography variant="h3" mb="33px">
+    <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
+      <Typography
+        sx={{ fontSize: { lg: "44px", xs: "25px" } }}
+        fontWeight={700}
+        color="#000"
+        mb="33px"
+      >
         Watch{" "}
-        <span style={{ color: "#ff2625", textTransform: "capitalize" }}>
+        <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
           {name}
-        </span>
-        {""} exercise video
+        </span>{" "}
+        exercise videos
       </Typography>
       <Stack
+        sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0px" } }}
         justifyContent="flex-start"
-        alignItems="center"
         flexWrap="wrap"
-        sx={{ flexDirection: "row", gap: { lg: "110px", xs: "0" } }}
+        alignItems="center"
       >
-        {exerciseVideo?.slice(0, 3)?.map((item, index) => (
+        {exerciseVideos?.slice(0, 3)?.map((item, index) => (
           <a
             key={index}
             className="exercise-video"
