@@ -5,7 +5,7 @@ import Logo from "../assets/images/Logo.png";
 const Navbar = () => {
   return (
     <Stack direction="row" gap="20px" style={{ marginTop: "30px" }}>
-      <Link to="/">
+      <Link to="/gym">
         <img
           src={Logo}
           alt=""
@@ -19,12 +19,12 @@ const Navbar = () => {
         alignItems="flex-end"
         color="#000"
       >
-        <Link to="/" style={{ color: "#000" }}>
+        <Link to="/gym" style={{ color: "#000" }}>
           Home
         </Link>
-        <Link to="/" style={{ color: "#000" }}>
+        <a href="#exercises" style={{ color: "#000" }}>
           Exercises
-        </Link>
+        </a>
       </Stack>
     </Stack>
   );

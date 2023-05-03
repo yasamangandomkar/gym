@@ -6,7 +6,12 @@ const ExerciseVideo = ({ exerciseVideos, name }) => {
   if (!exerciseVideos.length) return <Loader />;
 
   return (
-    <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
+    <Box
+      sx={{
+        marginTop: { lg: "203px", xs: "20px" },
+      }}
+      p="20px"
+    >
       <Typography
         sx={{ fontSize: { lg: "44px", xs: "25px" } }}
         fontWeight={700}
@@ -20,10 +25,15 @@ const ExerciseVideo = ({ exerciseVideos, name }) => {
         exercise videos
       </Typography>
       <Stack
-        sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0px" } }}
-        justifyContent="flex-start"
+        sx={{
+          flexDirection: { lg: "row" },
+          display: "flex",
+          width: "100%",
+          gap: { lg: "110px", xs: "0px" },
+        }}
         flexWrap="wrap"
         alignItems="center"
+        justifyContent="center"
       >
         {exerciseVideos?.slice(0, 3)?.map((item, index) => (
           <a
@@ -34,13 +44,17 @@ const ExerciseVideo = ({ exerciseVideos, name }) => {
             rel="noreferrer"
           >
             <img
-              style={{ borderTopLeftRadius: "20px" }}
+              style={{
+                borderTopLeftRadius: "20px",
+
+                objectFit: "cover",
+              }}
               src={item.video.thumbnails[0].url}
               alt={item.video.title}
             />
             <Box>
               <Typography
-                sx={{ fontSize: { lg: "28px", xs: "18px" } }}
+                sx={{ fontSize: { lg: "20px", xs: "18px" } }}
                 fontWeight={600}
                 color="#000"
               >
